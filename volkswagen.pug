@@ -1,0 +1,42 @@
+body.volkswagen
+include styles.pug
+.main-content
+  include header-nav.pug
+  article
+    .vw-lead-image(style="background-image: url('img/vw-desktop-large.png');")
+    h1.lead Volkswagen Dealers
+    p.lead Volkswagen came to Dealer.com to provide compliant sites for their dealerships. For me, this meant following their style guides but expanding to add variety, so that dealers would be able to differentiate from their neighboring competition. A series of index pages and color variations were designed and developed.
+
+ 
+    .image-slideshow
+      img(src="img/Originals10.jpg")
+      br
+      img(src="img/Originals26.jpg")
+      br
+      img(src="img/Originals7.jpg")
+      br
+      img(src="img/Originals8.jpg")
+      br
+      img(src="img/Originals9.jpg")
+      br
+    h2 Lessons Learned
+
+    p This was the first build where I was fully involved from the beginning (raw design) to end (development and configuration). This allowed me to delve deeply into the code and improve the final product, whereas before I would mockup an ideal situatuion and hope it could be executed. It allowed me to better understand the constraints of the system and know where it could be pushed and make decisions appropriately.
+
+
+
+    h3 Flipping Colors
+    p Dealerships like to be unique, and an important component of this is the color scheme of their site. Historically, developing additional color variations was a long and involved process, but through the implementation of color variables in SASS, and smart naming and use of colors, it became easy to add great variety to the templates.
+
+    img(src="img/colors.png")
+    br
+    img(src="img/vw_colors.png")
+    br
+
+
+    h3 A consistent flow
+    p Volkswagen had recently redesigned vw.com and I wanted to make sure that would translate down to the local dealership for consistent user experience. This meant challenging the development platform which had not deviated from the traditional drop-down navigation. I was able to integrate a mix of direct links to critical paths with a menu system that worked cleanly within our system and mimicked the vw.com experience as well.
+
+
+      video(src="img/vw-menusm.mov" autoplay loop)
+      br

@@ -1,0 +1,641 @@
+body {
+  background-color: #EFF4F7;
+  font-size: 16px;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+}
+
+.main-content {
+  max-width: 1280px;
+  display: flex;
+  margin: 2em auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.t-none {
+  display: none;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  width: 20%;
+}
+header .menu {
+  display: none;
+}
+header h3,
+header .bigmenu {
+  text-align: center;
+}
+header h3 li,
+header .bigmenu li {
+  margin-bottom: 1em;
+  font-size: 0.875em;
+}
+header h3 li a,
+header .bigmenu li a {
+  color: rgba(0, 0, 0, 0.7);
+}
+header h3 h5,
+header .bigmenu h5 {
+  margin-top: 2em;
+  font-size: 1.25em;
+}
+header h3 a,
+header .bigmenu a {
+  text-decoration: none;
+}
+header h3 a.current:before,
+header .bigmenu a.current:before {
+  content: "> ";
+}
+header h3 a:hover,
+header .bigmenu a:hover {
+  color: #991100;
+  text-decoration: underline;
+}
+
+.cards {
+  width: 75%;
+  margin-left: 22.5%;
+  transition: width 100ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.cards.grid .card {
+  width: calc(50% - 1em);
+  margin-right: 1em;
+  flex-direction: column;
+  min-height: 25em;
+  height: 25em;
+}
+.cards.grid .card .content {
+  text-align: left;
+}
+.cards.grid .card h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.cards.grid .card .image {
+  height: 30em;
+  width: 100%;
+  background-color: white;
+}
+.cards.grid .card .image:hover {
+  cursor: pointer;
+}
+
+.chips {
+  display: flex;
+  width: 100%;
+  align-items: space-around;
+  justify-content: left;
+  margin-bottom: 1em;
+}
+.chips .chip {
+  border-radius: 0.5em;
+  margin-right: 1.25em;
+  width: 25%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0.5em 1.25em;
+}
+.chips .chip.selected {
+  background-color: #991100;
+  color: white;
+}
+
+.card {
+  background-color: #fff;
+  min-height: 20em;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1em;
+  padding: 0em 0 0em;
+}
+.card .content {
+  margin: 0 2em;
+  flex-basis: 60%;
+}
+.card .content.full-width {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card .content.full-width p {
+  max-width: 40em;
+}
+.card .image {
+  display: block;
+  position: relative;
+  float: left;
+  width: 40%;
+  flex-grow: 1;
+  height: 20em;
+  border-radius: 4px 0 0 4px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header.minimal {
+  max-width: 1280px;
+  display: flex;
+  margin: 1em auto 1em;
+}
+
+.card.full {
+  width: 100%;
+  max-width: 1280px;
+  margin: 1em auto 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card.full img.full-width {
+  height: 60vh;
+  border: none;
+  background: black;
+  margin-bottom: 1em;
+}
+.card.full img.margined {
+  max-width: 960px;
+  width: 80%;
+  margin: 2em 10%;
+  height: 75vh;
+  border: none;
+  background: black;
+}
+
+.volkswagen {
+  background-size: contain;
+  background-position: center 0vh;
+  background-repeat: no-repeat;
+  background-image: url("img/slash.png");
+}
+
+.vw-lead-image {
+  width: 100%;
+  height: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.normal-width-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 1em auto 8em;
+  height: calc(50vh - 64px);
+  position: relative;
+}
+.normal-width-image .lead-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.full-width-image {
+  display: block;
+  width: calc(100% + 4em);
+  left: -2em;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+.full-width-image .lead-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal.white {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.modal.white:after {
+  color: black;
+}
+.modal:after {
+  content: "X";
+  display: block;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  color: white;
+  font-size: 2em;
+}
+.modal .image {
+  width: 90vw;
+  height: 90vh;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.resume {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 3em;
+}
+.resume .dates {
+  text-align: right;
+  flex-grow: 1;
+  color: gray;
+  margin-right: 2em;
+  width: 8em;
+  margin-top: 1.5em;
+}
+.resume .description {
+  flex-basis: calc(100% - 10em);
+  text-align: left;
+  flex-shrink: 1;
+}
+
+.skill-list {
+  width: 100%;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  -moz-column-fill: balance;
+       column-fill: balance;
+  margin-bottom: 2em;
+}
+.skill-list li {
+  background-color: #EFF4F7;
+  padding: 0.75em 1em;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+
+i, em {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.brag-list li {
+  margin: 1em 2em;
+  font-size: 1em;
+  line-height: 1.5em;
+  list-style: disc;
+}
+
+article {
+  width: 75%;
+  margin: 0 auto 0 25%;
+  padding: 0;
+  position: relative;
+}
+article caption {
+  text-align: center;
+}
+article .two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+article .two-columns img {
+  width: auto !important;
+  margin: 0 1em;
+}
+article .image-article {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto 1em;
+  justify-content: space-between;
+}
+article .image-article .left-content {
+  margin-right: 2em;
+}
+article ul,
+article ol {
+  max-width: 640px;
+  margin: 1em auto 0.25em;
+  list-style-type: decimal;
+}
+article ul li,
+article ol li {
+  margin-left: 1.5em;
+  font-size: 1.125em;
+  margin-bottom: 0.75em;
+  line-height: 1.75em;
+}
+article video {
+  max-width: 480px;
+  display: block;
+  margin: 1em auto 1em;
+  width: 100%;
+}
+article img {
+  max-width: 720px;
+  display: block;
+  margin: 0 auto 1em;
+  width: 100%;
+}
+article img.narrow {
+  max-width: 480px;
+}
+article img.full-width {
+  display: block;
+  max-width: 1024px;
+  width: 100%;
+}
+article p {
+  max-width: 720px;
+  font-size: 1.25em;
+  margin: 0 auto 1em;
+  line-height: 1.75em;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  max-width: 720px;
+  margin: 1em auto 0.25em;
+}
+
+.widemenu {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  position: relative;
+  margin: auto;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+}
+.widemenu h3 {
+  flex-basis: 20%;
+  text-align: left;
+}
+.widemenu ul {
+  display: flex;
+  align-items: center;
+}
+.widemenu ul li {
+  margin-left: 2em;
+}
+
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+  .skill-list {
+    font-size: 14px;
+  }
+  .brag-list {
+    margin-bottom: 1em;
+    font-size: 14px;
+  }
+  .card {
+    background-color: #fff;
+    min-height: 15em;
+    align-items: left;
+  }
+  .card .image {
+    display: block;
+    height: 15em;
+  }
+  .card .content p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .vw-lead-image {
+    width: 100%;
+    height: 45vh;
+  }
+  .volkswagen {
+    background-position: center 4em;
+  }
+  article {
+    width: calc(100% - 2em);
+    margin-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+  .skill-list {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+  .brag-list li {
+    margin: 1em 1.5em;
+  }
+  .resume {
+    margin-top: 1em;
+    font-size: 1.25em;
+    flex-direction: column;
+  }
+  .resume .dates {
+    text-align: left;
+    margin: 0em;
+    width: 100%;
+    flex-grow: 0;
+  }
+  .resume .description {
+    flex-basis: calc(100% - 6em);
+  }
+  .full-width-image {
+    height: calc(80vh - 64px);
+  }
+  .modal {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal:after {
+    right: 0.75em;
+    top: 0.75em;
+    font-size: 1.5em;
+  }
+  .modal .image {
+    width: 96vw;
+    height: 96vh;
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .cards.grid .card {
+    width: 100%;
+    margin-right: 0;
+  }
+  body {
+    font-size: 12px;
+  }
+  .cards {
+    margin-top: 4em;
+    width: calc(100vw - 2em);
+    margin-left: 1em;
+    left: 0em;
+    position: relative;
+    transition: width 100ms ease;
+  }
+  .resume .description {
+    flex-basis: inherit;
+  }
+  .card {
+    padding-bottom: 2em;
+    background-color: #fff;
+    min-height: 12em;
+    border-radius: 4px 4px 0 0;
+    margin-right: 0;
+    padding-top: 0;
+    flex-direction: column;
+  }
+  .card .content {
+    margin: 0 1.5em;
+    flex-basis: 0;
+  }
+  .card .content.full-width {
+    flex-basis: inherit;
+    flex-direction: row;
+  }
+  .card .content p {
+    font-size: 16px;
+  }
+  .card .image {
+    display: block;
+    height: 15em;
+    width: 100%;
+  }
+  header {
+    width: 100%;
+    float: none;
+    top: 0em;
+    position: fixed;
+    background-color: #EFF4F7;
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  header .bigmenu {
+    display: flex;
+    margin-right: 1em;
+  }
+  header .bigmenu h5 {
+    margin: 1em 0.25em;
+  }
+  header h3 {
+    text-align: left;
+    margin-left: 1em;
+    font-size: 16px;
+    margin-top: 1em;
+  }
+  header div.menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 1.5em;
+    font-weight: 600;
+    margin-top: 1.75em;
+  }
+  .t-none {
+    display: inline;
+  }
+  .m-none {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
