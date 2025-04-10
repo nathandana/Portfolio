@@ -2,13 +2,38 @@ include styles.pug
 .main-content
   include header-nav.pug
   article
-    img.full-width(src="img/design-system-pl.png")
+    img.full-width(src="img/transform/transform_cover.png", alt="Transform - CHP Design System Cover")
     h1.lead Case Study: Transform Design System
     p.lead Transform is an internal design system created to streamline the design and development of a critical tool used daily by over 20,000 employees at a Fortune 25 enterprise. TruCare Cloud is an enterprise application that facilitates the insurance authorization process, has extensive work management, creates long term service and support requests and more. It directly impacts the lives and health of 10s of millions of Americans.
 
     p.lead Initially developed as a small design library, Transform has grown into the interface backbone of this essential tool. The goal of Transform was to improve user experience, enhance consistency, and reduce development time by offering a centralized, reusable set of design components. Over time, Transform evolved into a full-fledged design system with scalable processes, robust governance, and strong cross-functional collaboration.
 
 
+    figure
+      img(src="img/transform/timeline.png" alt="Timeline of Transform's development")
+      figcaption.sr-only
+        | Timeline - 
+        ul
+          li 2020 - Transform Begins
+            ul
+              li Build Sketch design library
+              li Migrate to Figma
+              li Initial Code in Angular
+          li 2021 - Development
+            ul
+              li Dev team hired
+              li Initial Component Library
+              li Rebuild of Member Dashboard
+          li 2022 - Expansion
+            ul 
+              li Expanded team, hired designers and lead developer
+              li Improved pattern library
+              li Built out processes
+          li 2023 - Adoption
+            ul
+              li Enhanced multiple applications
+              li Expanded and improved pattern library
+              li V2 release
     h2.lead Building Out the Team
     p The journey of building Transform began with a single contributor: myself. As the sole UX designer, I initially focused on defining core components and patterns using Sketch. These early components established the foundation of the system, which was later migrated to Figma to improve collaboration and scalability. The design system was heavily influenced by Material Design, ensuring a familiar and intuitive user experience for developers and users alike.
     p Recognizing the need for development support, we onboarded four contract developers who began building components in Angular using Angular Material. I contributed directly to the codebase, created their backlog, and provided direction to ensure alignment with design principles. Additionally, I played a hands-on role in the adoption process by guiding the first sub-application to implement Transform, troubleshooting issues, and ensuring successful integration.
@@ -16,19 +41,21 @@ include styles.pug
 
     h3 Pattern Library
     p We created a pattern library site using Transform to serve as both a demonstration platform and a code resource. This site allowed users to configure components dynamically, view advanced usage examples, and share or save code snippets, all through an intuitive and user-friendly interface. By offering these capabilities, the pattern library not only showcased the versatility of Transform but also provided teams with a practical tool for integrating components into their applications.
+    img(src="img/transform/pattern-library.png" alt="Image of the Pattern Library Application interface")
     p The development of the pattern library was driven by user research and continuous feedback from developers. This feedback loop enabled us to identify and prioritize ongoing feature improvements, such as enhanced component configurability and better documentation. Looking ahead, our future vision includes transforming this pattern library into the foundation for a page builder tool. This tool would allow teams to rapidly build functional prototypes and fully coded pages by assembling pre-built components, further accelerating development and fostering innovation.
 
     h2 Accessibility
     p Recognizing the importance of inclusive design, I took the initiative to integrate accessibility into Transform's core by creating detailed reports, conducting internal testing, and developing training programs for designers to ensure compliance with accessibility standards. I worked closely with the accessibility team to improve my personal understanding and empathy for accessibility, which informed our approach to testing and design.
     p When we started, there was no formal accessibility support team in place. These efforts culminated in passing rigorous accessibility testing, meeting internal benchmarks, and ensuring that all components adhered to WCAG guidelines. By embedding accessibility into our design and development processes, we not only improved the overall usability of the system but also set a standard for future enterprise projects.
 
-    img.full-width(src="img/design-system-pl-codepen.png")
     h2 Lessons Learned
     p Throughout the development and scaling of Transform, one of the key takeaways was that design systems are fundamentally about relationships. In areas where I was able to build strong relationships—with developers, product managers, and other stakeholders—we saw significant success in adoption and expansion. Teams that trusted the system were more likely to integrate it into their workflows, which led to consistent, high-quality user experiences.
+    img(src="img/transform/changelog.png", alt="Changelog Example")
+
     p We initially attempted an app-by-app approach to adoption, which required extensive alignment between product, development, design, and leadership—areas where I did not have direct influence. When relationships were strong and priorities aligned, we saw significant progress. However, when those relationships weren’t as solid or priorities diverged, it became far more challenging to achieve success and drive adoption effectively.
     p In hindsight, a more strategic component-by-component approach might have yielded better results. Since most applications had been developed before the design system existed, comprehensive rebuilds were rarely prioritized. Focusing on incrementally replacing key components, such as buttons, across the software would have been a simpler and more efficient way to introduce Transform, ultimately positioning it to drive greater consistency across the enterprise.
+    img(src="img/transform/cards_doc.png", alt="Card Documentation Example")
 
-    img.full-width(src="img/design-system-generator.png")
     h2 Conclusion
     p Looking back, I am proud of the system that we built. Transform is comprehensive and robust, easy to use and implement. While I am no longer associated with the project it is still running strong, although without design support. I've used the processes, testing, components and feature set of Transform to help improve the enterprise wide design system, Fondue.
     p Transform's success was built on a foundation of scalable processes, accessibility, and strong cross-functional relationships. From a single-contributor project to an enterprise-wide solution, it has become a vital tool that enhances productivity, improves user experience, and ensures design consistency across the organization. The lessons learned from this journey continue to inform how we approach design systems and collaboration at scale.
