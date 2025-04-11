@@ -73,7 +73,9 @@ header .bigmenu {
 header h3 li,
 header .bigmenu li {
   margin-bottom: 1em;
-  font-size: 0.875em;
+  margin-top: 1.75em;
+  font-size: 1.125em;
+  font-weight: 500;
 }
 header h3 li a,
 header .bigmenu li a {
@@ -312,6 +314,56 @@ header.minimal {
   background-position: center center;
 }
 
+button.chatbot {
+  background-color: #991100;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+#chat-container label {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  padding: 0.5em 1em 0;
+  margin-bottom: 0.5em;
+  display: block;
+}
+#chat-container label sup {
+  font-size: 0.5em;
+}
+
+.message {
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+.message strong {
+  font-weight: 600;
+  background-color: #EFF4F7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+}
+
+input {
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  border: lightgray solid 1px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -439,7 +491,7 @@ article img.full-width {
 }
 article p {
   max-width: 720px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin: 0 auto 1em;
   line-height: 1.75em;
 }
@@ -499,6 +551,10 @@ article h5 {
   }
 }
 @media screen and (max-width: 640px) {
+  #chat-container.overlay {
+    max-height: 40px; /* Collapsed by default */
+    overflow: hidden;
+  }
   .vw-lead-image {
     width: 100%;
     height: 45vh;
@@ -628,8 +684,9 @@ article h5 {
     display: flex;
     margin-right: 1em;
   }
-  header .bigmenu h5 {
+  header .bigmenu li a {
     margin: 1em 0.25em;
+    font-size: 1.25em;
   }
   header h3 {
     text-align: left;
@@ -650,4 +707,99 @@ article h5 {
   .m-none {
     display: none;
   }
+}
+#chat-container.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 1em;
+  width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 400px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: max-height 0.3s ease;
+}
+
+#chat-container.collapsed {
+  max-height: 40px; /* Only show the toggle button */
+  overflow: hidden;
+}
+
+#chat-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  align-self: flex-end;
+}
+
+#chat-toggle:hover {
+  background-color: #0056b3;
+}
+
+#chat-log {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+#chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.chatbot {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.chatbot:hover {
+  background-color: #0056b3;
+}
+
+#chat-prompts {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chip:hover {
+  background-color: #0056b3;
 }/*# sourceMappingURL=styles.css.map */

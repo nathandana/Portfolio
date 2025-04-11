@@ -1,0 +1,17 @@
+#chat-container.overlay
+  label(for="chat-input") Ask NateBot<sup>TM</sup>  
+    button#chat-toggle(onclick="toggleChat()") Collapse
+
+  // Prompts as chips
+  #chat-prompts
+    span.chip(onclick="submitPrompt('Work History')") Work History
+    span.chip(onclick="submitPrompt('Process')") Process
+    span.chip(onclick="submitPrompt('Case Studies')") Case Studies
+
+  #chat-log
+    .message <strong>NateBot:</strong> Welcome! I am a custom chatbot designed to answer your questions. Get started by asking me about my portfolio.
+    
+  #chat-input-container
+    input#chat-input(type="text")
+    button.chatbot(onclick="sendMessage()") Send
+script(src="js/chatbot.js")
