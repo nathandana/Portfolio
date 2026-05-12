@@ -188,10 +188,6 @@ body.dyslexic {
   background: var(--primary-off-color);
   color: var(--button-color-off);
 }
-.toggle-group button:hover {
-  background: var(--primary-hover-color);
-  color: var(--button-color);
-}
 
 .toggle-group button.active {
   background: var(--button-bgcolor);
@@ -671,12 +667,9 @@ input {
 
 .skill-list {
   width: 100%;
-  -moz-column-count: 3;
-       column-count: 3;
-  -moz-column-gap: 1em;
-       column-gap: 1em;
-  -moz-column-fill: balance;
-       column-fill: balance;
+  column-count: 3;
+  column-gap: 1em;
+  column-fill: balance;
   margin-bottom: 2em;
 }
 .skill-list li {
@@ -684,8 +677,7 @@ input {
   padding: 0.5em 0.75em;
   border-radius: var(--border-radius-small);
   margin-bottom: 1em;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid-column;
+  break-inside: avoid-column;
   font-family: var(--font-family-interactions);
   line-height: var(--line-height-base);
 }
@@ -793,26 +785,29 @@ article h5 {
 }
 
 ul.horizontal {
-  display: flex; /* Align items horizontally */
-  list-style: none; /* Remove default bullet points */
+  display: flex;
+  /* Align items horizontally */
+  list-style: none;
+  /* Remove default bullet points */
   padding: 0;
   margin: 0 auto 2em;
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  width: -moz-fit-content;
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line if needed */
   width: fit-content;
   max-width: none;
 }
 ul.horizontal li {
-  margin: 0 0.5em; /* Add spacing between items */
+  margin: 0 0.5em;
+  /* Add spacing between items */
   position: relative;
-  width: -moz-fit-content;
   width: fit-content;
   /* Add the "|" separator */
   /* Remove the separator for the last item */
 }
 ul.horizontal li::after {
   content: "|";
-  margin-left: 0.5em; /* Add spacing after the separator */
+  margin-left: 0.5em;
+  /* Add spacing after the separator */
 }
 ul.horizontal li:last-child::after {
   content: "";
@@ -866,7 +861,8 @@ ul.horizontal li:last-child::after {
   flex-direction: column;
   z-index: 1000;
   transition: max-height 0.3s ease;
-  resize: none; /* disable native resize */
+  resize: none;
+  /* disable native resize */
 }
 #chat-container #chat-header {
   display: flex;
@@ -890,7 +886,8 @@ ul.horizontal li:last-child::after {
 }
 
 #chat-container.collapsed {
-  max-height: 48px; /* Only show the toggle button */
+  max-height: 48px;
+  /* Only show the toggle button */
   overflow: hidden;
 }
 
@@ -936,13 +933,14 @@ blockquote {
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .card {
-    min-height: 15em;
+    min-height: 17em;
     align-items: left;
   }
   .card .image {
     display: block;
     height: 15em;
   }
+
   :root {
     --font-size-h1: 2rem;
     --font-size-h2: 1.75rem;
@@ -957,12 +955,16 @@ blockquote {
   .resume-header {
     font-size: 2.75rem;
   }
+
   ul.horizontal {
-    display: flex; /* Align items horizontally */
-    list-style: none; /* Remove default bullet points */
+    display: flex;
+    /* Align items horizontally */
+    list-style: none;
+    /* Remove default bullet points */
     padding: 0;
     margin: 0 auto 2em;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line if needed */
     width: 100%;
     flex-direction: column;
   }
@@ -971,8 +973,10 @@ blockquote {
   }
   ul.horizontal li::after {
     content: "";
-    margin-left: 0; /* Add spacing after the separator */
+    margin-left: 0;
+    /* Add spacing after the separator */
   }
+
   :root {
     --font-size-h1: 2rem;
     --font-size-h2: 1.75rem;
@@ -982,25 +986,31 @@ blockquote {
     --font-size-small: .875rem;
     --font-size-large: 1.125rem;
   }
+
   p.lead {
     font-size: var(--font-size-large);
   }
+
   .caption {
     margin: 0 0 4em;
   }
+
   .half-card {
     display: flex;
     flex-direction: column;
     gap: 1em;
   }
+
   .main-content {
     display: block;
   }
+
   .settings-icon {
     cursor: pointer;
     width: 1.5em;
     height: 1.5em;
   }
+
   .callout {
     flex-direction: column;
     height: 80vh;
@@ -1016,18 +1026,23 @@ blockquote {
     background-repeat: no-repeat;
     background-position: center center;
   }
+
   blockquote {
     margin-bottom: 2em;
     width: 90%;
   }
+
   #chat-container.overlay {
     overflow: hidden;
     width: calc(100vw - 2em);
   }
+
   #chat-container.collapsed {
-    max-height: 48px; /* Only show the toggle button */
+    max-height: 48px;
+    /* Only show the toggle button */
     overflow: hidden;
   }
+
   article {
     width: calc(100% - 2em);
     margin-top: 4em;
@@ -1040,13 +1055,15 @@ blockquote {
   article p {
     font-size: var(--font-size-large);
   }
+
   .skill-list {
-    -moz-column-count: 2;
-         column-count: 2;
+    column-count: 2;
   }
+
   .brag-list li {
     margin: 1em 1.5em;
   }
+
   .resume {
     margin-top: 1em;
     font-size: 1.25rem;
@@ -1061,9 +1078,11 @@ blockquote {
   .resume .description {
     flex-basis: calc(100% - 6em);
   }
+
   .full-width-image {
     height: calc(80vh - 64px);
   }
+
   .modal {
     background-color: rgba(0, 0, 0, 0.9);
   }
@@ -1082,10 +1101,12 @@ blockquote {
     background-repeat: no-repeat;
     background-position: center center;
   }
+
   .cards.grid .card {
     width: 100%;
     margin-right: 0;
   }
+
   .cards {
     margin-top: 2em;
     width: calc(100vw - 2em);
@@ -1094,9 +1115,11 @@ blockquote {
     position: relative;
     transition: width 100ms ease;
   }
+
   .resume .description {
     flex-basis: inherit;
   }
+
   .card {
     min-height: 12em;
     margin-right: 0;
@@ -1117,6 +1140,7 @@ blockquote {
     height: 15em;
     width: 100%;
   }
+
   header {
     width: 100%;
     float: none;
@@ -1151,9 +1175,11 @@ blockquote {
     font-weight: 600;
     margin-top: 1.75em;
   }
+
   .t-none {
     display: inline;
   }
+
   .m-none {
     display: none;
   }
@@ -1250,4 +1276,4 @@ button:hover {
   to {
     opacity: 0.8;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

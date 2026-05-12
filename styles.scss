@@ -170,10 +170,10 @@ body.dyslexic {
   border: 1px solid var(--border-color);
   background: var(--primary-off-color);
   color: var(--button-color-off);
-  &:hover {
-    background: var(--primary-hover-color);
-    color: var(--button-color);
-  }
+  // &:hover {
+  //   background: var(--primary-hover-color);
+  //   color: var(--button-color);
+  // }
 }
 
 .toggle-group button.active {
@@ -926,7 +926,7 @@ blockquote {
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .card {
-    min-height: 15em;
+    min-height: 17em;
     align-items: left;
     .image {
       display: block;
