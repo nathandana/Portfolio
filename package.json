@@ -13,6 +13,17 @@
   "engines": {
     "node": ">=18"
   },
+  "devDependencies": {
+    "pug-cli": "^1.0.0"
+  },
+  "scripts": {
+    "build:pug": "npm run build:pug:root && npm run build:pug:archive",
+    "build:pug:root": "pug *.pug --out . --pretty",
+    "build:pug:archive": "pug archive/*.pug --out archive --pretty",
+    "watch:pug": "pug --watch *.pug --out . --pretty",
+    "watch:pug:archive": "pug --watch archive/*.pug --out archive --pretty",
+    "test": "npm run build:pug"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathandana/Portfolio.git"
