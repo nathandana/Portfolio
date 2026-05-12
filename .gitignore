@@ -1,0 +1,8 @@
+.env
+
+# Local Netlify folder
+.netlify
+
+# Chatbot JavaScript file
+js/chatbot.js
+js/server.js

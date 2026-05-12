@@ -1,0 +1,39 @@
+//- #chat-container.overlay(role="region" aria-label="Chat with NateBot")
+//-   // Header
+//-   #chat-header
+//-     label(for="chat-input") 
+//-       h3 Ask NateBot<sup>TM</sup>  
+//-     button.secondary#chat-toggle(onclick="toggleChat()")
+//-       img#toggle-icon(src="img/close_fullscreen.svg" alt="Collapse NateBot" width="24" height="24")
+//-   // Prompts as chips
+//-   #chat-prompts.chips
+//-     span.chip#chip-work(onclick="submitPrompt('Work History', this, 'chip-work')") Work History
+//-     span.chip#chip-interview(onclick="submitPrompt('Walk me through one of your favorite projects. What was your role and what impact did it have?', this, 'chip-interview')") Interview Me
+//-     span.chip#chip-casestudy(onclick="submitPrompt('Case Studies', this, 'chip-casestudy')") Case Studies
+
+//-   // Chat messages
+//-   #chat-log
+//-     span#typing-indicator
+
+//-   // Input field
+//-   #chat-input-container
+//-     input#chat-input(type="text")
+//-     button.chatbot(onclick="sendMessage()") Ask Nate
+
+
+//- // JS Script
+//- script(src="js/chatbot.js")
+
+//- document.addEventListener('click', function(event) {
+//-   var clickedElement = event.target;
+//-   var label = clickedElement.innerText || clickedElement.alt || clickedElement.id || clickedElement.getAttribute('aria-label') || 'unknown';
+//-   var path = window.location.pathname;
+
+//-   console.log('GA Event Fired:', { label, path }); // 👈 Add this
+
+//-   gtag('event', 'site_click', {
+//-     'event_category': 'Click',
+//-     'event_label': label,
+//-     'event_path': path
+//-   });
+//- });
