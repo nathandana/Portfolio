@@ -1,1 +1,108 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css"/><link href="styles.css" rel="stylesheet" type="text/css"/><div class="main-content"><meta name="viewport" content="width=device-width, initial-scale=1"/><link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500,500i,700&amp;display=swap" rel="stylesheet"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="js/works.js"></script><header><h3> <a href="index.html">Nathan A. Dana</a></h3><ul class="bigmenu"><li><h5><a href="index.html">Case <span class="t-none">Studies</span><span class="m-none">Study Index</span></a></h5></li><li><h5><a href="works.html">Works</a></h5></li><li><h5><a href="resume.html">Resume</a></h5></li></ul></header><article><img class="full-width" src="img/composer-main.png"/><h1 class="lead">Composer Architecture</h1><p class="lead">Last year I began work on a product squad that consists of a team made up of product, engineering, analytics, and design (myself). Our assignment is to be one to two quarters ahead of development teams by going through the product's backlog and assessing stories. This work can consist of simply reviewing epics and features to make sure everything is lined up, analyzing existing implementations to learn what we can, and also doing investigatory work and mockups.</p><h2>The Squad Model</h2><p>The squad is focused on the customer experience, which in this case means car dealerships and how they interact with their web sites. The major tool in this experience is something we call Composer, which is a tool that allows dealers and internal staff to change their web site. This can range from a simple text update to the extensive setup of myriad preferences that can get quite complex. Composer has had minimal investment over the years and is prime for a major overhaul.</p><img class="full-width" src="img/composer-current.png"/><center>The current interface largely relies on hover states and overlays.</center><h2>The overhaul</h2><p>My first major task coming from the squad was to investigate what the future of Composer should look like and, more importantly, behave. Fortunately, this was sped up by an existing design system I was able to tap into, removing decisions about color, type, spacing, icons, etc from the equation, allowing me to focus on overall UX architecture. The first factor I considered was establishing some UX guidelines that would help drive the project and also serve as reference points along the way.</p><ol><li>Provide guidance throughout</li><li>Make good decisions easy</li><li>Aid users with tooling</li><li>Prioritize common decisions</li><li>Accessible for all users</li><li>Intuitive for basic users, configurable for advanced</li><li>Mobile equal</li><li>Keep the user informed</li><li>Time-efficient</li><li>Tagged and tracked</li><li>Ready for mobile</li><li>User interviews</li></ol><h3>User Interviews</h3><p>Another major part of the process was an intense two-day session of user interviews. This consisted of four internal departments with both group interviews and hour-long shadow interviews. I led group interviews that focused on getting down to the details on a single task for each group, as well as a roundtable discussion. The shadow interviews I did consisted of observing user behavior and interviewing users along the way, uncovering a vast amount of information. I discovered plenty of areas of opportunity. For example, not forcing users to use a select/drop-down menu for simple true/false preferences when a simple checkbox can reduce that process to a single click. I also was reminded how much time internal users have spent learning a complex interface and how challenging a wholesale change to the tool could be.</p><h3>Mockups</h3><img class="full-width" src="img/composer-edit.png"/><img class="full-width" src="img/compoer-library.png"/><h3>Third-Party Tool</h3><p>The first aspect of the design that is being implemented is a tool for third-party integrations. Outside suppliers offer a wide range of tools that we support, and this tool allows internal users to manage that process. The existing tool was a simple (long) list of integrations in a dialog window. You could then click on each integration to turn it on, update preferences, etc.</p><img class="narrow" src="img/third-party-home.png"/><center>Currently, the "tool" is just a list of integrations.</center><br/><p>The overhauled interface is now a stand-alone application that lists the integrations on the left, with added search and category options. Activated integrations are moved to the top and visually differentiated. Clicking on an integration opens it to the right (keeping your context), and includes a much cleaner and easier-to-scan list. To the right of that, we brought documentation directly into the application that had lived in a separate source. This should all serve to make the new application far easier and faster to use.</p><img src="img/new-third-party-default.png"/><img src="img/new-third-party-screen.png"/></article></div>
+
+<link href="styles.css" rel="stylesheet" type="text/css"/>
+<div class="main-content">
+  <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <title>Nathan A. Dana - Lead UX Designer - Portfolio</title>
+    <!-- Google tag (gtag.js)-->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BSH4TB7ZVY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-BSH4TB7ZVY');
+    </script>
+    <script src="js/script.js"></script>
+    <header>
+      <button id="logoutBtn" type="button" onclick="logout()" hidden="hidden">Logout</button>
+      <h1>Nathan A. Dana</h1>
+      <ul class="bigmenu">
+        <li> <a href="home.html">Home</a></li>
+        <li> <a href="process.html">Process</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </header>
+    <svg class="settings-icon" id="settingsIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+      <path fill="currentColor" d="M47.16,21.221l-5.91-0.966c-0.346-1.186-0.819-2.326-1.411-3.405l3.45-4.917c0.279-0.397,0.231-0.938-0.112-1.282 l-3.889-3.887c-0.347-0.346-0.893-0.391-1.291-0.104l-4.843,3.481c-1.089-0.602-2.239-1.08-3.432-1.427l-1.031-5.886 C28.607,2.35,28.192,2,27.706,2h-5.5c-0.49,0-0.908,0.355-0.987,0.839l-0.956,5.854c-1.2,0.345-2.352,0.818-3.437,1.412l-4.83-3.45 c-0.399-0.285-0.942-0.239-1.289,0.106L6.82,10.648c-0.343,0.343-0.391,0.883-0.112,1.28l3.399,4.863 c-0.605,1.095-1.087,2.254-1.438,3.46l-5.831,0.971c-0.482,0.08-0.836,0.498-0.836,0.986v5.5c0,0.485,0.348,0.9,0.825,0.985 l5.831,1.034c0.349,1.203,0.831,2.362,1.438,3.46l-3.441,4.813c-0.284,0.397-0.239,0.942,0.106,1.289l3.888,3.891 c0.343,0.343,0.884,0.391,1.281,0.112l4.87-3.411c1.093,0.601,2.248,1.078,3.445,1.424l0.976,5.861C21.3,47.647,21.717,48,22.206,48 h5.5c0.485,0,0.9-0.348,0.984-0.825l1.045-5.89c1.199-0.353,2.348-0.833,3.43-1.435l4.905,3.441 c0.398,0.281,0.938,0.232,1.282-0.111l3.888-3.891c0.346-0.347,0.391-0.894,0.104-1.292l-3.498-4.857 c0.593-1.08,1.064-2.222,1.407-3.408l5.918-1.039c0.479-0.084,0.827-0.5,0.827-0.985v-5.5C47.999,21.718,47.644,21.3,47.16,21.221z M25,32c-3.866,0-7-3.134-7-7c0-3.866,3.134-7,7-7s7,3.134,7,7C32,28.866,28.866,32,25,32z"></path>
+    </svg>
+    <div class="menu" id="settingsMenu">
+      <label>Dark Mode
+        <div class="toggle-group" id="darkToggle">
+          <button data-value="on">On</button>
+          <button data-value="off">Off</button>
+          <button class="active" data-value="auto">Auto</button>
+        </div>
+      </label>
+      <label>High Contrast
+        <label class="switch">
+          <input type="checkbox" id="contrastSwitch"/><span class="slider"></span>
+        </label>
+      </label>
+      <label>Dyslexic Mode
+        <label class="switch">
+          <input type="checkbox" id="dyslexicSwitch"/><span class="slider"></span>
+        </label>
+      </label>
+      <div style="display: flex; gap: 1em;">
+        <button class="settings-reset" id="resetSettings">Reset to Default</button>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </html>
+  <main>
+    <article><img class="full-width" src="img/composer-main.png" alt="Composer Interface"/>
+      <h1 class="lead">Composer Architecture</h1>
+      <p class="lead">I served as the lead designer on a cross-functional product squad alongside product managers, engineers, and analysts. Our mission was to stay one to two quarters ahead of development by proactively shaping the product backlog—evaluating epics, analyzing existing implementations, conducting user research, and delivering mockups that would guide future development.</p>
+      <h2>Background: What Is Composer?</h2>
+      <p>Composer is a core internal tool that enables car dealerships—and internal staff—to manage their websites. Tasks range from basic content updates to configuring complex site preferences. However, the tool had received minimal investment over the years, resulting in a clunky, unintuitive experience heavily reliant on hover states and overlay dialogs. It was ripe for modernization.</p><img class="full-width" src="img/composer-current.png" alt="Current State of Compoent Interface"/>
+      <div class="caption">The current interface largely relies on hover states and overlays.</div>
+      <h2>Strategic Framing</h2>
+      <p>My initial challenge was to reimagine the future of Composer—not just visually, but behaviorally. Leveraging an existing design system helped eliminate decisions around color, spacing, and iconography, allowing me to focus on UX architecture and product usability. I created a foundational set of UX principles to guide the project and align the team:</p>
+      <ol>
+        <li>Provide guidance throughout</li>
+        <li>Make good decisions easy</li>
+        <li>Aid users with tooling</li>
+        <li>Prioritize common decisions</li>
+        <li>Be accessible to all users</li>
+        <li>Intuitive for basic users, configurable for advanced</li>
+        <li>Ensure mobile parity</li>
+        <li>Keep users informed</li>
+        <li>Design for time-efficiency</li>
+        <li>Support tracking and tagging</li>
+      </ol>
+      <p>These principles informed every design decision and helped us advocate for user-centered improvements across the tool.</p>
+      <h3>User Research</h3>
+      <p>To deeply understand the current pain points, I led an intensive two-day round of user interviews and observations. This included:</p>
+      <ol> 
+        <li>Group interviews with four internal departments</li>
+        <li>Task-specific roundtable discussions</li>
+        <li>1:1 shadow sessions to observe real-time behaviors and friction</li>
+      </ol>
+      <p>These sessions uncovered dozens of opportunities for streamlining workflows. For example, simple preference toggles were implemented with dropdowns—even for binary true/false values. Replacing these with checkboxes reduced the number of clicks and improved scannability.</p><img class="full-width" src="img/composer-edit.png" alt="Composer in Edit Mode"/><img class="full-width" src="img/compoer-library.png" alt="Composer Library"/>
+      <h3>Design Execution</h3>
+      <h4>Third-Party Tool</h4>
+      <p>The first high-priority feature we tackled was the Third-Party Integration Manager, used to configure external tools and services supported by the platform.</p>
+      <h4>Before:</h4>
+      <p>A static dialog with a long, unorganized list of integrations. Users had to click into each item to access preferences, with documentation stored in a separate system.</p>
+      <h4> After:</h4>
+      <p>I redesigned this as a stand-alone, full-page application with:</p>
+      <ol> 
+        <li>A searchable, categorized list of integrations on the left</li>
+        <li>Activated integrations visually elevated to the top</li>
+        <li>A contextual panel to the right for editing preferences</li>
+        <li>Embedded documentation available inline</li>
+      </ol>
+      <p>This architecture preserves context, supports fast scanning and filtering, and dramatically reduces cognitive overhead. The design has already moved into implementation and is receiving positive early feedback.</p><img class="narrow" src="img/third-party-home.png" alt="Current Thrid Party Integration Home"/>
+      <div class="caption">Currently, the "tool" is just a list of integrations.</div>
+      <h3>Impact</h3>
+      <p>The Composer overhaul demonstrates the value of aligning research, design, and architecture at the foundation level. My contributions created:</p>
+      <ol> 
+        <li>A scalable UX framework for future work</li>
+        <li>A human-centered foundation for high-complexity tools</li>
+        <li>A tangible improvement in one of the system’s most used (and previously painful) features</li>
+      </ol><img src="img/new-third-party-default.png" alt="Proposed Third Party Tool"/><img src="img/new-third-party-screen.png" alt="Proposed Third Party Tool with Documentation"/>
+    </article>
+  </main>
+</div>
