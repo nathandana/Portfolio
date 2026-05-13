@@ -17,9 +17,7 @@ html(lang="en")
     h1 Nathan A. Dana
     ul.bigmenu
       li 
-        a(href="home.html") Home
-      li 
-        a(href="process.html") Process
+        a(href="index.html") Home
       //- li
       //-   a(href="#") Car Shopper UX
       //- li
@@ -36,6 +34,8 @@ html(lang="en")
       //-   a(href="#") Little Wins
       //- li
       //-   a(href="works.html") Works
+      li 
+        a(href="process.html") Process
       li
         a(href="resume.html") Resume
 
@@ -50,26 +50,25 @@ html(lang="en")
 
   //- Settings Menu
   .menu#settingsMenu
-    label
-      | Dark Mode
+    .menu-row
+      span Dark Mode
       .toggle-group#darkToggle
-        button(data-value="on") On
-        button(data-value="off") Off
-        button.active(data-value="auto") Auto
+        button(type="button" data-value="on") On
+        button(type="button" data-value="off") Off
+        button.active(type="button" data-value="auto") Auto
 
-    label
-      | High Contrast
-      label.switch
+    .menu-row
+      span High Contrast
+      label.switch(for="contrastSwitch")
         input(type="checkbox" id="contrastSwitch")
         span.slider
 
-    label
-      | Dyslexic Mode
-      label.switch
+    .menu-row
+      span Dyslexic Mode
+      label.switch(for="dyslexicSwitch")
         input(type="checkbox" id="dyslexicSwitch")
         span.slider
 
     div(style="display: flex; gap: 1em;")
       button#resetSettings.settings-reset Reset to Default
       //- button#logoutBtn(onclick="logout()") Logout
-

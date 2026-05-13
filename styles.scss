@@ -151,7 +151,7 @@ body.dyslexic {
   display: block;
 }
 
-.menu label {
+.menu-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,10 +170,10 @@ body.dyslexic {
   border: 1px solid var(--border-color);
   background: var(--primary-off-color);
   color: var(--button-color-off);
-  // &:hover {
-  //   background: var(--primary-hover-color);
-  //   color: var(--button-color);
-  // }
+  &:hover {
+    background: var(--primary-hover-color);
+    color: var(--button-color);
+  }
 }
 
 .toggle-group button.active {
@@ -1266,6 +1266,5 @@ button:hover {
   from { opacity: 0; }
   to { opacity: 0.8; }
 }
-
 
 

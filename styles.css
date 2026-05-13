@@ -168,7 +168,7 @@ body.dyslexic {
   display: block;
 }
 
-.menu label {
+.menu-row {
   display: flex;
   justify-content: space-between;
   align-items: center;

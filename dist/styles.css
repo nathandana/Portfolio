@@ -168,7 +168,7 @@ body.dyslexic {
   display: block;
 }
 
-.menu label {
+.menu-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,6 +187,10 @@ body.dyslexic {
   border: 1px solid var(--border-color);
   background: var(--primary-off-color);
   color: var(--button-color-off);
+}
+.toggle-group button:hover {
+  background: var(--primary-hover-color);
+  color: var(--button-color);
 }
 
 .toggle-group button.active {
