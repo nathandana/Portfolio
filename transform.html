@@ -1,6 +1,6 @@
 
 <body data-context="Transform Design System">
-  <link href="styles.css" rel="stylesheet" type="text/css"/>
+  <link href="dist/styles.css" rel="stylesheet" type="text/css"/>
   <div class="main-content">
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
@@ -20,7 +20,7 @@
         <button id="logoutBtn" type="button" onclick="logout()" hidden="hidden">Logout</button>
         <h1>Nathan A. Dana</h1>
         <ul class="bigmenu">
-          <li> <a href="home.html">Home</a></li>
+          <li> <a href="index.html">Home</a></li>
           <li> <a href="process.html">Process</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
@@ -29,26 +29,25 @@
         <path fill="currentColor" d="M47.16,21.221l-5.91-0.966c-0.346-1.186-0.819-2.326-1.411-3.405l3.45-4.917c0.279-0.397,0.231-0.938-0.112-1.282 l-3.889-3.887c-0.347-0.346-0.893-0.391-1.291-0.104l-4.843,3.481c-1.089-0.602-2.239-1.08-3.432-1.427l-1.031-5.886 C28.607,2.35,28.192,2,27.706,2h-5.5c-0.49,0-0.908,0.355-0.987,0.839l-0.956,5.854c-1.2,0.345-2.352,0.818-3.437,1.412l-4.83-3.45 c-0.399-0.285-0.942-0.239-1.289,0.106L6.82,10.648c-0.343,0.343-0.391,0.883-0.112,1.28l3.399,4.863 c-0.605,1.095-1.087,2.254-1.438,3.46l-5.831,0.971c-0.482,0.08-0.836,0.498-0.836,0.986v5.5c0,0.485,0.348,0.9,0.825,0.985 l5.831,1.034c0.349,1.203,0.831,2.362,1.438,3.46l-3.441,4.813c-0.284,0.397-0.239,0.942,0.106,1.289l3.888,3.891 c0.343,0.343,0.884,0.391,1.281,0.112l4.87-3.411c1.093,0.601,2.248,1.078,3.445,1.424l0.976,5.861C21.3,47.647,21.717,48,22.206,48 h5.5c0.485,0,0.9-0.348,0.984-0.825l1.045-5.89c1.199-0.353,2.348-0.833,3.43-1.435l4.905,3.441 c0.398,0.281,0.938,0.232,1.282-0.111l3.888-3.891c0.346-0.347,0.391-0.894,0.104-1.292l-3.498-4.857 c0.593-1.08,1.064-2.222,1.407-3.408l5.918-1.039c0.479-0.084,0.827-0.5,0.827-0.985v-5.5C47.999,21.718,47.644,21.3,47.16,21.221z M25,32c-3.866,0-7-3.134-7-7c0-3.866,3.134-7,7-7s7,3.134,7,7C32,28.866,28.866,32,25,32z"></path>
       </svg>
       <div class="menu" id="settingsMenu">
-        <label>Dark Mode
+        <div class="menu-row"><span>Dark Mode</span>
           <div class="toggle-group" id="darkToggle">
-            <button data-value="on">On</button>
-            <button data-value="off">Off</button>
-            <button class="active" data-value="auto">Auto</button>
+            <button type="button" data-value="on">On</button>
+            <button type="button" data-value="off">Off</button>
+            <button class="active" type="button" data-value="auto">Auto</button>
           </div>
-        </label>
-        <label>High Contrast
-          <label class="switch">
+        </div>
+        <div class="menu-row"><span>High Contrast</span>
+          <label class="switch" for="contrastSwitch">
             <input type="checkbox" id="contrastSwitch"/><span class="slider"></span>
           </label>
-        </label>
-        <label>Dyslexic Mode
-          <label class="switch">
+        </div>
+        <div class="menu-row"><span>Dyslexic Mode</span>
+          <label class="switch" for="dyslexicSwitch">
             <input type="checkbox" id="dyslexicSwitch"/><span class="slider"></span>
           </label>
-        </label>
+        </div>
         <div style="display: flex; gap: 1em;">
           <button class="settings-reset" id="resetSettings">Reset to Default</button>
-          <button id="logoutBtn" onclick="logout()">Logout</button>
         </div>
       </div>
     </html>
@@ -56,7 +55,7 @@
       <article><img class="full-width" src="img/transform/transform_cover.png" alt="Transform - CHP Design System Cover"/>
         <h1 class="lead" style="margin-bottom: .5em;">Case Study: Transform Design System</h1>
         <h2 style="margin-bottom: 2em; font-size: var(--font-size-h4);">2020–2023 | Centene Corporation | Design Systems | UX Architect</h2>
-        <p class="lead">I led the creation and evolution of Transform, an internal design system that streamlined TruCare Cloud. TruCare Cloud is an enterprise application that facilitates the insurance authorization process, has extensive work management, creates long term service and support requests and more. Used daily by 20,000 employees at Centene, a Fortune 25 enterprise, it directly impacts the health and well-being of tens of millions of Americans.</p>
+        <p class="lead">I led the creation and evolution of Transform, an internal design system that streamlined TruCare Cloud. TruCare Cloud is an enterprise application that facilitates the insurance authorization process, has extensive work management, creates long term service and support requests and more. Used daily by 20,000 employees at Centene&ndash;a Fortune 25 enterprise&ndash;it directly impacts the health and well-being of tens of millions of Americans.</p>
         <p>Initially developed as a small design library, Transform has grown into the interface backbone of this essential tool. The goal of Transform was to improve user experience, enhance consistency, and reduce development time by offering a centralized, reusable set of design components. Over time, Transform evolved into a full-fledged design system with scalable processes, robust governance, and strong cross-functional collaboration.</p>
         <figure><img src="img/transform/timeline.png" alt="Timeline of Transform's development" style="background-color: white;"/>
           <figcaption class="sr-only">Transform Timeline
@@ -93,7 +92,7 @@
           </figcaption>
         </figure>
         <h2 class="lead">Team Formation & Cross-functional Growth</h2>
-        <p>Transform began as a one-person effort—me. As the sole UX designer, I initially focused on defining core components and patterns using Sketch. These early components established the foundation of the system, which was later migrated to Figma to improve collaboration and scalability. The design system was heavily influenced by Material Design, ensuring a familiar and intuitive user experience for developers and users alike.</p>
+        <p>Transform began as a one-person effort—me. As the sole UX designer, I initially focused on defining core components and patterns using Sketch. These early components established the foundation of the system, which was later migrated to Figma to improve collaboration and scalability. The design system was heavily influenced by Material Design, ensuring a familiar and intuitive user experience for users and developers.</p>
         <p>Recognizing the need for development support, we onboarded four contract developers who began building components in Angular using Angular Material. I contributed directly to the codebase, created their backlog, and provided direction to ensure alignment with design principles. Additionally, I played a hands-on role in the adoption process by guiding the first sub-application to implement Transform, troubleshooting issues, and ensuring successful integration.</p>
         <p>With the growing complexity of Transform, we hired a lead developer to manage technical architecture and lead the development team. This pivotal hire allowed us to expand further into a fully functional scrum team, including additional developers, QA specialists, and a product owner. Together, we implemented agile methodologies, refined processes, and established a collaborative workflow that ensured the design system's long-term sustainability.</p>
         <h3>Pattern Library</h3>

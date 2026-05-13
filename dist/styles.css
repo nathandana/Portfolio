@@ -188,6 +188,10 @@ body.dyslexic {
   background: var(--primary-off-color);
   color: var(--button-color-off);
 }
+.toggle-group button:hover {
+  background: var(--primary-hover-color);
+  color: var(--button-color);
+}
 
 .toggle-group button.active {
   background: var(--button-bgcolor);
