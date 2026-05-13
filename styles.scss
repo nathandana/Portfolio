@@ -60,7 +60,7 @@ body {
   font-family: var(--font-family-base);
   font-weight: 400;
   color: var(--text-color);
-  margin-bottom: 20em;
+  margin-bottom: 10em;
 }
 
 /* Additional Modes */
@@ -250,6 +250,8 @@ body {
 .main-content {
   max-width: 1280px;
   margin: 2em auto;
+  padding-left: 1em;
+  padding-right: 2em;
 }
 h1,
 h2,
@@ -925,6 +927,9 @@ blockquote {
 }
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
+  .main-content {
+    padding: 0;
+  }
   .card {
     min-height: 17em;
     align-items: left;
@@ -1097,7 +1102,7 @@ p.lead {
 
   .cards {
     margin-top: 2em;
-    width: calc(100vw - 2em);
+    width: calc(100vw - 4em);
     margin-left: 1em;
     left: 0em;
     position: relative;
